@@ -23,7 +23,7 @@ namespace KatlaSport.DataAccess
 
         private static void SetCreatedUtcColumn(IEnumerable<ColumnModel> columns)
         {
-            foreach (var column in columns.Where(c => c.Name.EndsWith("_utc")))
+            foreach (var column in columns.Where(c => c.Name.EndsWith("_utc", System.StringComparison.Ordinal)))
             {
                 column.DefaultValueSql = "GETUTCDATE()";
             }
