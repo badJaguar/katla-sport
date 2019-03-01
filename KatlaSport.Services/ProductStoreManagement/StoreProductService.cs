@@ -12,18 +12,18 @@ namespace KatlaSport.Services.ProductStoreManagement
 {
     public class StoreProductService : IStoreProductService
     {
-        //private readonly IUserContext _userContext;
+        // private readonly IUserContext _userContext;
         private readonly IProductStoreContext _storeContext;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="StoreProductService"/> class with specified <see cref="IProductCatalogueContext"/>.
         /// </summary>
         /// <param name="context">A <see cref="IProductCatalogueContext"/>.</param>
-        /// <param name="userContext">A <see cref="IUserContext"/>.</param>
         public StoreProductService(IProductStoreContext context)
         {
             _storeContext = context ?? throw new ArgumentNullException();
-            //_userContext = userContext ?? throw new ArgumentNullException();
+
+            // _userContext = userContext ?? throw new ArgumentNullException();
         }
 
         public async Task<List<ProductStoreItem>> GetItemsAsync()

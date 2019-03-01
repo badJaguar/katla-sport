@@ -1,15 +1,14 @@
-﻿using AutoMapper;
-using KatlaSport.DataAccess;
-using KatlaSport.DataAccess.ProductCatalogue;
-using KatlaSport.DataAccess.ProductStoreHive;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using DbProductCategory = KatlaSport.DataAccess.ProductCatalogue.ProductCategory;
-
-namespace KatlaSport.Services.ProductManagement
+﻿namespace KatlaSport.Services.ProductManagement
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using AutoMapper;
+    using DataAccess;
+    using DataAccess.ProductCatalogue;
+    using DbProductCategory = KatlaSport.DataAccess.ProductCatalogue.ProductCategory;
+
     /// <summary>
     /// Represents a product category service.
     /// </summary>
@@ -23,7 +22,6 @@ namespace KatlaSport.Services.ProductManagement
         /// </summary>
         /// <param name="context">A <see cref="IProductCatalogueContext"/>.</param>
         /// <param name="userContext">A <see cref="IUserContext"/>.</param>
-        /// <param name="storeContext">A <see cref="IProductStoreHiveContext"/></param>
         public ProductCategoryService(IProductCatalogueContext context, IUserContext userContext)
         {
             _context = context ?? throw new ArgumentNullException();

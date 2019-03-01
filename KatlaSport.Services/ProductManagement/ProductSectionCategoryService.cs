@@ -12,7 +12,6 @@ namespace KatlaSport.Services.ProductManagement
     {
         private readonly IProductStoreHiveContext _context;
 
-        /// <inheritdoc />
         public ProductSectionCategoryService(IProductStoreHiveContext context)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
